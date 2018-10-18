@@ -1,3 +1,6 @@
 button.addEventListener('pointerup', function(event) {
-  var device = navigator.bluetooth.requestDevice;
+  navigator.bluetooth.requestDevice({
+    acceptAllDevices: true,
+    optionalServices: ['battery_service']
+  });
 });
